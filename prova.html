@@ -22,25 +22,25 @@
 /* ===== TUO STILE ORIGINALE ===== */
 
 body{
-font-family:'Inter', sans-serif;
-margin:0;
-color:#333;
+  font-family:'Inter', sans-serif;
+  margin:0;
 
-background: linear-gradient(
-  to bottom,
-  #bcd8cc 0%,
-  #8fb3a3 30%,
-  #d6cec2 70%,
-  #b8aea0 100%
-);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 
-background-attachment: fixed;
+  min-height:100dvh;
+
+  background: linear-gradient(
+    to bottom,
+    #bcd8cc 0%,
+    #8fb3a3 30%,
+    #d6cec2 70%,
+    #b8aea0 100%
+  );
+  background-attachment: fixed;
 }
 
-h1, h2{
-font-family:'Playfair Display', serif;
-text-align:center;
-}
 
 header{
 background:
@@ -53,7 +53,19 @@ flex-direction:column;
 justify-content:center;
 }
 
-.logo{
+.container {
+  width: min(92%, 900px);
+  margin: 40px auto;
+
+  background: rgba(255,255,255,0.95);
+  padding: 40px 30px;
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  animation: fadeIn 0.6s ease;
+}
+  
+  .logo{
 width:33%;
 display:block;
 margin:0 auto;
@@ -67,7 +79,7 @@ margin:0 auto;
   gap: 10px;
   background: #2f5d50;
   color: white;
-  padding: 12px 22px;
+  padding: 11px 20px;
   text-decoration:none;
   border-radius:30px;
   margin:6px 4px;
@@ -131,9 +143,9 @@ font-size:14px;
 
 .percorsi-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  padding: 0;
 }
 
 .card {
@@ -189,7 +201,7 @@ position:fixed;
 bottom:120px;
 right:20px;
 
-background:rgba(245, 101, 39, 0.8);
+background: #2f5d50;
 color:white;
 padding:12px 16px;
 border-radius:30px;
@@ -245,6 +257,11 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 }
 }
 
+  @keyframes fadeIn{
+  from{opacity:0; transform:translateY(15px);}
+  to{opacity:1; transform:translateY(0);}
+}
+  
 /* MOBILE */
 @media (max-width: 768px) {
   .logo {
@@ -299,8 +316,8 @@ margin-top:30px;
 
 /* ICONE */
 .contact-box svg {
-  width: 28px;
-  height: 28px;
+  width: 24px !important;
+  height: 24px !important;
 
   fill: #f5f5f5; /* 👈 icone chiare */
 
@@ -316,10 +333,11 @@ margin-top:30px;
   /* FOOTER */
 
 footer{
-text-align:center;
-padding:30px;
-font-size:14px;
-color:#777;
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+  color:#777;
+  background: transparent;
 }
 
  /* MAP */
@@ -421,14 +439,14 @@ color:#777;
 
 
 .disclaimer {
-  max-width: 800px;
-  margin: 40px auto;
+  max-width: 900px;
+  margin: 30px auto;
   padding: 20px;
   font-size: 13px;
   color: #555;
-  background: rgba(255,255,255,0.7);
-  border-radius: 12px;
-  line-height: 1.5;
+
+  background: rgba(255,255,255,0.75);
+  border-radius: 16px;
 }
   
 html{scroll-behavior:smooth}
