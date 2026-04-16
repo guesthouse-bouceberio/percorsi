@@ -105,7 +105,6 @@ nav a:hover {
   max-width: 1000px;
   margin: 2px auto;
   padding: 30px 20px;
-   
 }
 
 /* =========================
@@ -113,13 +112,16 @@ nav a:hover {
 ========================= */
 
 .card {
-  background: rgba(255,255,255,0.9);
-  padding: 15px;
-  border-radius: 18px;
-  cursor: pointer;
+  background: rgba(255,255,255,0.95);
+  padding: 26px;
+  margin-bottom: 26px;
+
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
+
   transition: 0.3s;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  font-size: 0.9em;
+   
 }
 
 .card:hover {
@@ -127,21 +129,13 @@ nav a:hover {
   box-shadow: 0 14px 32px rgba(0,0,0,0.12);
 }
 
-.card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;   /* 🔥 MAGIA */
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 10px;
-}
-  
 .card p {
   margin-bottom: 10px;
    color: #555;
    text-align: justify;
 }
 
-.card ul,
+   .card ul,
 .card ol {
   color: #555;
    padding-left: 18px;
@@ -166,45 +160,26 @@ nav a:hover {
   color: #555;
 }
 
-.place-card {
-  background: rgba(140, 189, 170, 0.18);
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: 0.3s;
 
-  display: flex;
-  flex-direction: column;
-}
+/* =========================
+   GALLERY
+========================= */
 
- .place-card img {
-  height: 120px;        /* 👈 controlli tu la dimensione */
-  object-fit: cover;
-}
-
-  .place-card p {
-  padding: 8px;
-  font-size: 0.9em;
-  margin: 0;
-    overflow: hidden;
-}
-  
-  .place-card:hover {
-  transform: translateY(-4px);
-}
-
-  .place-card p b {
-  display: block;
-  margin-bottom: 4px;
-}
-  
-.percorsi-grid {
+.gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-  padding: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 12px;
 }
 
+img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
 
 
 
@@ -282,92 +257,11 @@ transform:translateY(-2px);
 }
 
   
-/* GALLERY */
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:12px;
-}
 
-img{
-width:100%;
-border-radius:12px;
-transition:0.3s;
-}
 
-img:hover{
-transform:scale(1.03);
-}
 
-  /* PRENOTA SUBITO */
 
-.prenota-float{
-position:fixed;
-bottom:110px;
-right:20px;
-
-background:rgba(245, 101, 39, 0.8);
-color:white;
-padding:12px 16px;
-border-radius:30px;
-font-size:14px;
-text-decoration:none;
-
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-z-index:1000;
-
-/* animazioni */
-animation:
-fadeInUp 0.6s ease,
-pulseSoft 4s 1s infinite;
-
-transition:0.3s;
-}
-
-/* HOVER */
-.prenota-float:hover{
-background:#1f3f35;
-transform:translateY(-3px) scale(1.05);
-box-shadow:0 8px 18px rgba(0,0,0,0.35);
-
-/* ferma animazione */
-animation:none;
-}
-
-/* ENTRATA */
-@keyframes fadeInUp{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* PULSE */
-@keyframes pulseSoft {
-0%{
-transform:scale(1);
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-}
-50%{
-transform:scale(1.05);
-box-shadow:0 8px 20px rgba(0,0,0,0.35);
-}
-100%{
-transform:scale(1);
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-}
-}
-
-  @keyframes fadeIn{
-  from{opacity:0; transform:translateY(15px);}
-  to{opacity:1; transform:translateY(0);}
-}
-  
 /* MOBILE */
 @media (max-width: 768px) {
   .logo {
