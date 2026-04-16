@@ -171,16 +171,16 @@ nav a:hover {
   flex-direction: column;
 }
 
-  .place-card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;   /* 👈 QUADRATO PERFETTO */
-  object-fit: cover;     /* 👈 crop automatico */
+ .place-card img {
+  height: 120px;        /* 👈 controlli tu la dimensione */
+  object-fit: cover;
 }
 
   .place-card p {
   padding: 8px;
   font-size: 0.9em;
   margin: 0;
+    overflow: hidden;
 }
   
   .place-card:hover {
@@ -194,8 +194,8 @@ nav a:hover {
   
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
 }
 
 
