@@ -160,7 +160,30 @@ nav a:hover {
   color: #555;
 }
 
+  .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 16px;
+}
 
+  .percorsi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 🔥 SEMPRE 3 */
+  gap: 30px; /* 👉 più spazio tra le card */
+  padding: 30px;
+}
+  
+.place-card {
+  background: rgba(140, 189, 170, 0.18);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.place-card:hover {
+  transform: scale(1.03);
+}
 /* =========================
    GALLERY
 ========================= */
@@ -269,6 +292,18 @@ transform:translateY(-2px);
   }
 }
 
+  @media (max-width: 900px) {
+  .percorsi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .percorsi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  
 /* CTA */
 
 .cta{
