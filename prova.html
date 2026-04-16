@@ -159,6 +159,24 @@ nav a:hover {
 .card h4 {
   color: #555;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 16px;
+}
+
+.place-card {
+  background: rgba(140, 189, 170, 0.18);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.place-card:hover {
+  transform: scale(1.03);
+}
   
   .logo{
 width:33%;
@@ -592,43 +610,63 @@ html{scroll-behavior:smooth}
 
 <h1 style="text-align:center;font-family:'Playfair Display'">I nostri percorsi</h1>
 
-  
 <div class="container">
 
+  <!-- PEDONALI -->
+  <div class="card" id="piedi">
+    <h2>🚶 Percorsi pedonali</h2>
 
+    <div class="grid">
 
+      <div class="place-card" onclick="openMap('GPX_trekking_viafrancigena.gpx', 'Via Francigena')">
+        <img src="francigena1.jpg">
+        <p>
+          <b>Via Francigena</b><br>
+          ⏱ 2h • 🏔️ 300m • 🟢 Facile
+        </p>
+      </div>
 
-<div class="percorsi-grid" id="piedi">
-<h2>Percorsi pedonali</h2>
-  <!-- CARD -->
-  <div class="card" onclick="openMap('GPX_trekking_viafrancigena.gpx', 'Via Francigena')">
-    <img src="francigena1.jpg" alt="Via Francigena">
-    <h4>Via Francigena</h4>
-    <p>🚶 A piedi</p>
-    <p>⏱ 2h • 🏔️ 300m • 🟢 Facile</p>
+    </div>
   </div>
-</div>
 
-<div class="percorsi-grid" id="strada">
-<h2>Percorsi ciclabili</h2>
-  <div class="card" onclick="openMap('GPX_mtb_nus_fenis_ussel.gpx', 'Trail Castello di Fénis - Ussel')">
-    <img src="trail_fenisussel.jpg" alt="Trail Castello di Fénis - Ussel">
-    <h4>Trail Castello di Fénis - Ussel</h4>
-    <p>🚵 MTB</p>
-    <p>⏱ 3h • 🏔️ 800m • 🟡 Medio</p>
-  </div>
-</div>
 
-<div class="percorsi-grid" id="mtb">
-<h2>Percorsi per MTB</h2>
-  <div class="card" onclick="openMap('GPX_strada_pista_ciclopedonale_dorabaltea.gpx', 'Pista ciclabile Dora Baltea')">
-    <img src="ciclabile.jpg" alt="Pista ciclabile Dora Baltea">
-    <h4>Pista ciclabile Dora Baltea</h4>
-    <p>🚴 Bici da strada</p>
-    <p>⏱ 1h30 • 🏔️ 150m • 🔴 Difficile</p>
+  <!-- CICLABILI -->
+  <div class="card" id="strada">
+    <h2>🚴 Percorsi ciclabili</h2>
+
+    <div class="grid">
+
+      <div class="place-card" onclick="openMap('GPX_strada_pista_ciclopedonale_dorabaltea.gpx', 'Pista ciclabile Dora Baltea')">
+        <img src="ciclabile.jpg">
+        <p>
+          <b>Pista ciclabile Dora Baltea</b><br>
+          ⏱ 1h30 • 🏔️ 150m • 🔴 Difficile
+        </p>
+      </div>
+
+    </div>
   </div>
- </div>
-</div>
+
+
+  <!-- MTB -->
+  <div class="card" id="mtb">
+    <h2>🚵 Percorsi MTB</h2>
+
+    <div class="grid">
+
+      <div class="place-card" onclick="openMap('GPX_mtb_nus_fenis_ussel.gpx', 'Trail Castello di Fénis - Ussel')">
+        <img src="trail_fenisussel.jpg">
+        <p>
+          <b>Trail Castello di Fénis - Ussel</b><br>
+          ⏱ 3h • 🏔️ 800m • 🟡 Medio
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</div>  
+
 
 <div class="cta">
 <p>Non hai trovato quello che cercavi?</p>
